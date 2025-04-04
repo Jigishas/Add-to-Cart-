@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+ <!-- <style>
+    body{
+      background-color: antiquewhite;
+    }
+    nav{
+      background-color: #868686;
+      padding: 10px;
+      display: flex;
+      color: red;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      padding-left: 35px;
+      border-radius: 5px;
+      text-decoration: underline;
+      
+    }
+    /* Basic reset and font */
+/* Basic reset and font */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+nav h1 {
+  text-align: center;
+ 
+}
+
+/* Product list grid (4 columns) */
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#product-list li {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#product-list h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#product-list p {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  color: #e63946;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #45a049;
+}
+
+/* Cart styling - COLUMN FORMAT */
+#cart {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Optional: constrain width */
+}
+
+#cart h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+#cart-items {
+  display: flex;       /* Changed to block for column */
+  flex-direction: column; /* Stack items vertically */
+  gap: 8px;           /* Spacing between items */
+  padding: 0;
+  list-style: none;
+  margin: 0 0 15px 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+/* Optional: Add remove button */
+.remove-item {
+  color: #e63946;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#total-cost {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}  </style>-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <h1>Shopping cart</h1>
+    <!-- Add this cart icon to your HTML (place near top of body) -->
+<button id="cart-toggle" class="cart-toggle-btn">
+  🛒 <span id="cart-count">0</span>
+</button>
+
+<!-- Existing cart div - modify to add 'cart-panel' class -->
+<div id="cart" class="cart-panel">
+  <h2>Your Cart</h2>
+  <button class="close-cart">&times;</button>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <p id="total-cost">Total: $0.00</p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
+  </nav>
+  <!-- Product list -->
+<ul id="product-list">
+  <li>
+    <h2>Product 1</h2>
+    <p id="fl">10.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 2</h2>
+    
+    <p id="fl">5.99</p>
+   <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 3</h2>
+    <p id="fl"> 7.49</p>
+  <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 4</h2>
+    <p id="fl"> 6.99</p>
+   <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 5</h2>
+    <p id="fl"> 58.99</p>
+   <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 6</h2>
+    <p id="fl"> 17.69</p>
+  <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 7</h2>
+    <p id="fl"> 14.99</p>
+   <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 8</h2>
+    <p id="fl"> 7.49</p>
+  <button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 9</h2>
+    <p id="fl"> 15.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 10</h2>
+    <p id="fl"> 45.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 11</h2>
+    <p id="fl"> 35.49</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 12</h2>
+    <p id="fl"> 19.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 13</h2>
+    <p id="fl"> 24.49</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 14</h2>
+    <p id="fl"> 79.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 15</h2>
+    <p id="fl"> 27.99</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+  <li>
+    <h2>Product 16</h2>
+    <p id="fl"> 68.49</p>
+<button class="add-to-cart">Add to Cart</button>
+  </li>
+</ul>
+
+<!-- Cart -->
+<div id="cart">
+  <h2>Cart</h2>
+  <div class="cart-footer">
+    <p id="total-cost">Total: $0.00</p>
+    <!-- other elements -->
+  </div>
+  <!-- Project -->
+  <script src="mainss.js"></script>
+</body>
+</html>
